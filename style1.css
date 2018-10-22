@@ -1,0 +1,27 @@
+
+h1 {
+ color: #5e227f;
+ font-family: Lucida,Helvetica, sans-serif;
+}
+
+body {
+  color:#5e227f;
+  font-family: Lucida,Helvetica,sans-serif;
+  font-size:16px;
+  }
+
+
+
+  h2 {
+   color: #41a7b3;
+   font-family: Lucida,Helvetica, sans-serif;
+ }
+
+ h3 {
+  color: #f08181;
+  font-family: Lucida,Helvetica, sans-serif;
+}
+
+.jumbotron {line-height: 50px; vertical-align: middle; text-align: center;}
+.Win{color:#99CC66}
+.Fail{color:#4a9ff5}

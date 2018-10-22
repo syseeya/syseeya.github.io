@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Number game</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=auto, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+  <div class="jumbotron">
+<h1>Play with Numbers </h1>
+<h2><br>Here are the rules :<br></h2>
+<div id="Rules">
+1. Please enter a number ranging from -20 to 20 randomly, and click “Go!”.<br>
+2. The computer will generate a number ranging from -50 to 50 randomly, and add the two numbers together.<br>
+3. If the sum of the two numbers is between -30 to 30, then you win! Otherwise, you lose the game.<br><br>
+</div>
+
+<h3>Now, press the button and give it a try！<br><br></h3>
+
+<div id="Control">
+    <input id="Input">
+    <button id="Go" type="button" class="btn btn-warning">Go!</button>
+
+</div>
+
+<div id="Log"></div>
+</div>
+<script type="text/javascript">
+~function(window,document)
+{
+    var MessageWin = function(I,R){return '胜利! 输入的数字为' + I + ', 随机数字为' + R + ', 相加结果为' + (I + R) + ', 在目标范围内 :)'},
+        MessageFail = function(I,R){return '失败! 输入的数字为' + I + ', 随机数字为' + R + ', 相加结果为' + (I + R) + ', 不在在目标范围内 :('},
+        MessageError = function(){return '输入有误! 请输入范围为[-' + Range + ',' + Range + ']的数字'},
+
+        Range = 20,
+        RangeComputer = 50,
+        RangeResult = 30,
+
+   $ = function(A){return document.getElementById(A)},
+   Hint = function(A,B)
+        {
+            var LogElement = document.createElement('div');
+            LogElement.innerText = A
+            B && LogElement.setAttribute('class',B)
+            LogLast ?
+                Log.insertBefore(LogElement,LogLast) :
+                Log.appendChild(LogElement)
+            LogLast = LogElement
+        },
+
+        Input = $('Input'),
+        Button = $('Go'),
+        Log = $('Log'),
+        LogLast;
+
+  Button.addEventListener('click',function()
+  {
+        var I = parseFloat(Input.value),
+            R = -RangeComputer + parseInt(2 * Math.random() * RangeComputer + 1);
+        if (I != I || Math.abs(I) > Range) return Hint(MessageError())
+        Math.abs(I + R) <= RangeResult ?
+            Hint(MessageWin(I,R),'Win') :
+            Hint(MessageFail(I,R),'Fail')
+    })
+}(window,document)
+
+</script>
+
+</body>
+</html>

@@ -31,21 +31,12 @@
                           </tr>
                      </thead>
                 </table>
+                <div id="chart"></div>
+          </div>
       </body>
  </html>
  <script>
- var chart = c3.generate({
-   data: {
-       columns: [
-         ['Lulu', 50,4,3,2],
-         ['Olaf', 50,6,8,1]
-       ],
-       type : 'bar'
-   },
-   bar: {
-       title: "Dogs love:",
-   }
- });
+
  $("document").ready(function() {
        var items = [];
        var i = 0;
@@ -92,5 +83,16 @@
        }); // end .getJSON
     }); // end button
 }); // document ready
-
+var chart = c3.generate({
+          data: {
+              columns: [
+                ['Lulu', 50,4,3,2],
+                ['Olaf', 50,6,8,1]
+              ],
+              type : 'bar'
+          },
+          bar: {
+              title: "Dogs love:",
+          }
+       });
 </script>

@@ -78,7 +78,7 @@ a:focus {
 }
 
 .navbar-brand h1{
-	color: #003399;
+	color: #CC3399;
   font-size: 20px;
   line-height: 40px;
 }
@@ -314,7 +314,7 @@ hr {
 }
 
 #intro.intro {
-	padding:20% 0 0 0;
+	padding:10% 0 0 0;
 }
 
 .intro .slogan {
@@ -338,7 +338,7 @@ hr {
 	color: #CC3399;
 	text-shadow: none;
 	font-size: 60px;
-	line-height: 60px;
+	line-height: 550px;
 	font-weight: 700;
 	font-family: Montserrat, sans-serif;
 	background-color: rgba(0, 0, 0, 0);

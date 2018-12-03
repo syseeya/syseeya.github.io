@@ -338,7 +338,7 @@ hr {
 	color: #CC3399;
 	text-shadow: none;
 	font-size: 60px;
-	line-height: 550px;
+	line-height: 480px;
 	font-weight: 700;
 	font-family: Montserrat, sans-serif;
 	background-color: rgba(0, 0, 0, 0);
@@ -357,7 +357,7 @@ hr {
 
 @media (max-width: 768px) {
   .intro .slogan h2 {
-    font-size: 48px;
+    font-size: 45px;
   }
 }
 
